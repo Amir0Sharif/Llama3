@@ -73,13 +73,14 @@ https://github.com/peremartra/Large-Language-Model-Notebooks-Course/blob/main/5-
 https://colab.research.google.com/github/peremartra/Large-Language-Model-Notebooks-Course/blob/main/5-Fine%20Tuning/LoRA_Tuning_PEFT.ipynb#scrollTo=uCalslQFGL7K
 
 # Descriptions:Efficient Fine-Tuning with LoRA
-Low Rank Adaptation (LoRA) and QLoRA (an even more efficient variant of LoRA)
+Low Rank Adaptation (LoRA) and QLoRA (an even more efficient variant of LoRA).
 The chosen approach involves taking an open large language model and fine-tuning it to generate fictional product descriptions. When prompted with a product name and a category, the model, OpenLLaMA-3-8B, produces the following descriptions:
 
-# 1- Permissive License:
+1- Permissive License:
 1-1- OpenLLaMA-3-8B comes with a permissive license that allows for redistribution, fine-tuning, and derivative works.
 1-2- The license also requires explicit attribution, which is a new addition compared to the previous version, Llama 2.
-# 2- Dataset:
+
+2- Dataset:
 2-1- OpenLLaMA-3-8B was trained on a dataset containing 1 trillion tokens.
 2-2- It’s part of the OpenLLaMA project, which aims to provide open-source reproductions of Meta AI’s LLaMA large language model.
 2-3- The weights for OpenLLaMA-3-8B are available in both EasyLM format (for use with the EasyLM framework) and PyTorch format (for use with the Hugging Face transformers library).
