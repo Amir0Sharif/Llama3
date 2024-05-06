@@ -1,8 +1,8 @@
 # Llama3
 
-Llama 3 8B Programming 
+Llama 3 8B Programming: 
 
-General Arrangement
+General Arrangement:
 Deliver Llama  via Colab or Jupyter or GitHub  by 5/12/2024
 General Steps: 1) Find the right tool/structure/codebase for Llama 3-8B, 
 2) enable accurate location of dataset based on user's question, 
@@ -10,7 +10,7 @@ General Steps: 1) Find the right tool/structure/codebase for Llama 3-8B,
 Suggested arrangement of coding -- 
 First 10 minutes: 1) outline tasks, 2) communicate division of labor -- Last 10 minutes: 1) communicate next steps, 2) communicate take-home tasks, 3) Update the "Pair Programming Log.md"
 
-Resources
+Resources:
 https://www.databricks.com/blog/efficient-fine-tuning-lora-guide-llms
 https://lmstudio.ai/
 https://huggingface.co/meta-llama/Meta-Llama-3-8B/tree/main
@@ -19,7 +19,7 @@ https://github.com/meta-llama/llama3
 https://www.youtube.com/watch?v=4fdZwKg9IbU
 
 
-Steps
+Steps:
 Anaconda Prompt
 Download and install the latest version of Conda
 Run Anaconda Prompt as Administrator
@@ -33,7 +33,7 @@ Jupyter notebook
 
 
 
-Jupyter Notebook
+Jupyter Notebook:
 File name:
 LLMStudio_Python.ipynb
 
@@ -52,3 +52,11 @@ completion = client.chat.completions.create(
 # Print the chatbot's response
 print(completion.choices[0].message.content)
 LLMStudio_Python.ipynb
+
+
+
+
+Example:
+https://github.com/peremartra/Large-Language-Model-Notebooks-Course/blob/main/5-Fine%20Tuning/LoRA_Tuning_PEFT.ipynb
+https://colab.research.google.com/github/peremartra/Large-Language-Model-Notebooks-Course/blob/main/5-Fine%20Tuning/LoRA_Tuning_PEFT.ipynb#scrollTo=uCalslQFGL7K
+
