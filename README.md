@@ -77,12 +77,20 @@ Low Rank Adaptation (LoRA) and QLoRA (an even more efficient variant of LoRA).
 The chosen approach involves taking an open large language model and fine-tuning it to generate fictional product descriptions. When prompted with a product name and a category, the model, OpenLLaMA-3-8B, produces the following descriptions:
 
 1- Permissive License:
+
 1-1- OpenLLaMA-3-8B comes with a permissive license that allows for redistribution, fine-tuning, and derivative works.
 1-2- The license also requires explicit attribution, which is a new addition compared to the previous version, Llama 2.
 
 2- Dataset:
+
 2-1- OpenLLaMA-3-8B was trained on a dataset containing 1 trillion tokens.
 2-2- It’s part of the OpenLLaMA project, which aims to provide open-source reproductions of Meta AI’s LLaMA large language model.
 2-3- The weights for OpenLLaMA-3-8B are available in both EasyLM format (for use with the EasyLM framework) and PyTorch format (for use with the Hugging Face transformers library).
+
 The model can be directly loaded from the Hugging Face Hub using the LlamaTokenizer class
 
+LoRA is implemented in the Hugging Face Parameter Efficient Fine-Tuning (PEFT) library, offering ease of use and QLoRA can be leveraged by using bitsandbytes and PEFT together. HuggingFace Transformer Reinforcement Learning (TRL) library offers a convenient trainer for supervised finetuning with seamless integration for LoRA. 
+
+Prepping the data for supervised fine-tuning
+
+It is crucial to preprocess the data into a format suitable for supervised fine-tuning. In essence, supervised fine-tuning involves further training a pretrained model to generate text based on a given prompt. The process is supervised because the model is fine-tuned using a dataset containing prompt-response pairs formatted consistently.
