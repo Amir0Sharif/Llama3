@@ -13,6 +13,7 @@ First 10 minutes: 1) outline tasks, 2) communicate division of labor -- Last 10 
 
 # Resources:
 
+
 https://www.databricks.com/blog/efficient-fine-tuning-lora-guide-llms
 
 https://lmstudio.ai/
@@ -25,6 +26,7 @@ https://github.com/meta-llama/llama3
 
 https://www.youtube.com/watch?v=4fdZwKg9IbU
 
+https://www.youtube.com/watch?v=eC6Hd1hFvos
 
 # Steps:
 
@@ -89,8 +91,21 @@ The chosen approach involves taking an open large language model and fine-tuning
 
 The model can be directly loaded from the Hugging Face Hub using the LlamaTokenizer class
 
-LoRA is implemented in the Hugging Face Parameter Efficient Fine-Tuning (PEFT) library, offering ease of use and QLoRA can be leveraged by using bitsandbytes and PEFT together. HuggingFace Transformer Reinforcement Learning (TRL) library offers a convenient trainer for supervised finetuning with seamless integration for LoRA. 
+LoRA is implemented in the Hugging Face Parameter Efficient Fine-Tuning (PEFT) library, offering ease of use and QLoRA can be leveraged by using bitsandbytes and PEFT together. HuggingFace Transformer Reinforcement Learning (TRL) library offers a convenient trainer for supervised finetuning with seamless integration for LoRA.
+
 
 Prepping the data for supervised fine-tuning
 
 It is crucial to preprocess the data into a format suitable for supervised fine-tuning. In essence, supervised fine-tuning involves further training a pretrained model to generate text based on a given prompt. The process is supervised because the model is fine-tuned using a dataset containing prompt-response pairs formatted consistently.
+
+
+
+
+
+import torch
+from transformers import LlamaTokenizer, LlamaForCausalLM
+
+model_name = 'openlm-research/open_llama_3b_v2'
+tokenizer = LlamaTokenizer.from_pretrained(model_name)
+foundation_model = LlamaForCausalLM.from_pretrained(model_name)
+
